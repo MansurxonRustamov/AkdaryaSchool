@@ -1,0 +1,37 @@
+{% extends 'baseHeader.html' %}
+{% block content %}
+  <br><br><br><br>
+  <section class="teachers section-heading container">
+    <h4>Maktab <em>O'qituvchilari</em></h4>
+    <br>
+    <center>
+      <form>
+        <select name="techsubject">
+          <option value="{{res}}">{{res}}</option>
+          <option value="">----</option>
+          {% for i in subject %}
+            <option value="{{i}}">{{i}}</option>
+          {% endfor %}
+
+        </select>
+        <input class="inpser" value="{{result}}" type="text" name="techsearch" placeholder="Qidiring...">
+        <input class="inpsub" type="submit" value="Qidirish">
+      </form>
+      <h1 class="techallcount">Jami: {{count}}</h1>
+    </center>
+    <div class="wrap">
+      <div class="row">
+        {% for teacher in data %}
+        <a class="col-lg-2 col-md-3 col-sm-4 col-6  writem">
+          <img style="width: 200px;height: 210px;!important; border-radius:100%" src="{{ teacher.image.url }}">
+          <p>{{ teacher.full_name }} </p>
+          <h6>{{ teacher.subject }}</h6>
+        </a>
+        {% endfor %}
+
+
+      </div>
+    </div>
+  </section>
+  
+{% endblock content %}

@@ -1,0 +1,34 @@
+{% extends 'baseHeader.html' %}
+{% load static %}
+
+{% block content %}
+  <br><br>
+
+  <section class="aboutTech container">
+    <div class="row ">
+      <div class="col-lg-6 imageAb">
+      <img src="{% static 'assets/images/team-member-03.jpg' %}" alt="TeacherName">
+    </div>
+    <div class="col-lg-6 textAb">
+      <br>
+      <h6>O'qituvchi: <span>Matematika</span></h6>
+      <h3>{{ teacher.full_name }}</h3>
+      <p>{{ teacher.about }}</p>
+      <br>
+      <ul class="social-icons">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-rss"></i></a></li>
+          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+      </ul>
+      <br>
+      <div class="contactTech">
+        <a href="#">Portfolio</a>
+        <a href="#">Aloqa</a>
+      </div>
+    </div>
+    </div>
+  </section>
+  
+{% endblock content %}

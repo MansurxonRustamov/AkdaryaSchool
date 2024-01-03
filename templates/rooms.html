@@ -1,0 +1,26 @@
+{% extends 'baseHeader.html' %}
+
+{% block content %}
+<br><br><br><br>
+<section class="teachers section-heading container">
+    <h4>Maktab <em>Xonalari</em></h4>
+    <br>
+    <center>
+      <h1 class="techallcount">Jami: 34 ta xona</h1>
+    </center>
+
+    <div class="wrap">
+      <div class="row">
+        
+        {% for item in room %}
+        <a class="col-lg-4 col-md-3 col-sm-4 col-6  writem">
+            <img style="width: 400px;height: 280px!important; border-radius: 10px;" src="{{item.image.url}}">
+            <h6 style="font-size: 20px;">{{ item.name }} xonasi</h6>
+        </a>
+        {% endfor %}
+        
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}

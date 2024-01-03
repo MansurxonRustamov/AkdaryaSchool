@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Oqdaryo tuman, ixtisoslashtirilgan maktabi</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-eduwell-style5.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightbox.css ' %}">
+  </head>
+  <style>
+    ::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: lightgrey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkgrey;
+  border-radius: 5px;
+}
+  </style>
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="{% url 'home' %}" style="margin-top: 20px;" class="logo">
+                          <!-- <img src="assets/images/logo.svg" style="width: 60px; color: #fff;" alt="EduWell Template"> --> <h2>Oqdaryo</h2> 
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li><a href="{% url 'home' %}" class="active">Bosh sahifa</a></li>
+                          <li class="has-sub">
+                              <a href="javascript:void(0)">Sahifalar</a>
+                              <ul class="sub-menu">
+                                  <li><a href="{% url 'about' %}">Maktab haqida</a></li>
+                                  <li><a href="{% url 'teachers' %}">O'qituvchilar</a></li>
+                                  <li><a href="{% url 'news' %}">Yangiliklar</a></li>
+                                  <li><a href="{% url 'rooms' %}">Xonalar</a></li>
+                              </ul>
+                          </li>
+                          <li class="scroll-to-section"><a href="{% url 'contact' %}">Biz bilan a'loqa</a></li> 
+                          {% if user.is_authenticated %}
+                          <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                          {% else%}
+                          <li><a href="{% url 'login' %}">Kirish</a></li>
+                          {% endif %}
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+
+
+  
+
+
+  {% block content %}
+  {% endblock content %}
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/tabs.js' %}"></script>
+    <script src="{% static 'assets/js/video.js' %}"></script>
+    <script src="{% static 'assets/js/slick-slider.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js'  %}"></script>
+    <script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'baseHeader.html' %}
+
+{% block content %}
+  <br><br>
+
+  <section id="logins">
+    <form>
+      <h4>Kirish</h4>
+      <label for="idnum">Id Raqam</label><br>
+      <input class="inputLog" type="text" placeholder="Id kiriting..." id="idnum" name="id"><br>
+      <label for="password">O'quvchining Paroli</label><br>
+      <input class="inputLog" type="password" id="password" name="password" placeholder="Parolni kiriting..." ><br>
+      <a href="#"> Parolni Unutdingizmi!!!</a><br>
+      <button type="submit" class="inputLog inputsub" value="Kirish"></button>
+    </form>
+  </section>
+  
+{% endblock content %}
